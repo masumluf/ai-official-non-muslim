@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const siteLinks = Object.freeze({
+        linkedinCompany: "https://www.linkedin.com/company/ummah-heights",
+    });
     const revealItems = document.querySelectorAll("[data-reveal]");
     const slides = Array.from(document.querySelectorAll(".slideshow-slide"));
     const slideshowFrame = document.querySelector(".slideshow-frame");
@@ -28,6 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         revealItems.forEach(item => item.classList.add("is-visible"));
     }
+
+    document.querySelectorAll("[data-linkedin-company-link]").forEach(link => {
+        link.setAttribute("href", siteLinks.linkedinCompany);
+    });
 
     document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener("click", event => {
