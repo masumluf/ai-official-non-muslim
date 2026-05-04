@@ -615,10 +615,11 @@ h3 {
 }
 
 .policy-layout h1 {
-    max-width: 16ch;
-    font-size: clamp(3rem, 4.8vw, 4.35rem);
-    line-height: 0.95;
+    max-width: none;
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
+    line-height: 1.05;
     margin-bottom: 14px;
+    white-space: nowrap;
 }
 
 .policy-layout h2 {
@@ -634,6 +635,25 @@ h3 {
     margin-bottom: 30px;
     padding-bottom: 20px;
     border-bottom: 1px solid var(--line);
+}
+
+.policy-intro {
+    font-size: 1rem;
+    line-height: 1.82;
+    color: var(--text);
+    margin: 0 0 18px;
+}
+
+.policy-intro .text-link {
+    color: var(--accent);
+}
+
+.policy-intro + .policy-intro {
+    margin-bottom: 30px;
+}
+
+.policy-intro + .policy-section {
+    margin-top: 10px;
 }
 
 .policy-section {
@@ -780,8 +800,9 @@ h3 {
 
     .policy-layout h1 {
         max-width: none;
-        font-size: clamp(2.5rem, 11vw, 3.35rem);
-        line-height: 0.98;
+        font-size: clamp(2rem, 8vw, 2.6rem);
+        line-height: 1.05;
+        white-space: normal;
     }
 
     .policy-layout h2 {
